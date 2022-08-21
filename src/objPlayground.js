@@ -53,7 +53,9 @@ const arrayGenerator = (type, object) => {
     break;
     case 'entries':
       return Object.entries(object);
-    break;  
+    break;
+    default:
+      return 0;  
   }
 };
 
