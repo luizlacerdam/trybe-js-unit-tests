@@ -47,15 +47,15 @@ const arrayGenerator = (type, object) => {
   switch (type) {
     case 'keys':
       return Object.keys(object);
-    break;
+      break;
     case 'values':
       return Object.values(object);
-    break;
+      break;
     case 'entries':
       return Object.entries(object);
-    break;
+      break;
     default:
-      return 0;  
+      return 0;
   }
 };
 
