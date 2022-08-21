@@ -46,13 +46,13 @@ const calculator = (number1, number2) => {
 const arrayGenerator = (type, object) => {
   switch (type) {
     case 'keys':
-      console.log(Object.keys(object));
+      return Object.keys(object);
     break;
     case 'values':
-      console.log(Object.values(object));
+      return Object.values(object);
     break;
     case 'entries':
-      console.log(Object.entries(object));
+      return Object.entries(object);
     break;  
   }
 };
