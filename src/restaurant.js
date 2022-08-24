@@ -53,7 +53,14 @@
   BOAS PRÁTICAS TDD: COMECE PELO TESTE 1 DO ARQUIVO `tests/restaurant.spec.js` E VOLTE A ESTE ARQUIVO QUANDO FOR INDICADO!
 
 */
-
+const menu = [{ 
+  food: {
+    coxinha: 3.9, 
+    sopa: 9.9 },
+  drink: {
+    agua: 3.9, 
+    cerveja: 6.9 },
+  }];
 // PASSO 1: Crie uma função `createMenu()` que, recebendo um objeto como parâmetro, retorna esse objeto no seguinte formato: 
 //  { fetchMenu: () => objetoPassadoPorParametro }.
 //
@@ -63,11 +70,11 @@
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu()` uma chave de nome `consumption` que, como valor inicial, tem um array vazio.
-  const createMenu = (obj) => ({ 
-    fetchMenu: (() => obj),
-    consumption: [], 
-  });
-
+  // const createMenu = (obj) => ({ 
+  //   fetchMenu: (() => obj),
+  //   consumption: [], 
+  // });
+  let superArray = [];
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------
@@ -88,7 +95,13 @@
 // // Essa função deve ser associada à chave `order` de `restaurant`
 // ```
 // Agora faça o TESTE 6 no arquivo `tests/restaurant.spec.js`.
+const orderFromMenu = (request) => superArray.push(request);
 
+//  const createMenu = (obj) => ({ 
+//     fetchMenu: (() => obj),
+//     consumption: superArray,
+//     order: orderFromMenu, 
+//   });  
 //------------------------------------------------------------------------------------------
 
 // PASSO 4: Adicione ao objeto retornado por `createMenu()` uma chave `pay` armazenando uma função
@@ -97,5 +110,13 @@
 // - fará a soma do preço desses itens;
 // - retornará o valor somado acrescido de 10%.
 // DICA: para isso, você precisará percorrer tanto o objeto da chave `food` quanto o objeto da chave `drink`.
+const soma = (obj) => obj[0];
+console.log(soma(menu).food);
+ const createMenu = (obj) => ({ 
+    fetchMenu: (() => obj),
+    consumption: superArray,
+    order: orderFromMenu,
+    pay: soma, 
+  });  
 
 module.exports = createMenu;
