@@ -58,12 +58,16 @@
 //  { fetchMenu: () => objetoPassadoPorParametro }.
 //
 // Agora faça o TESTE 4 no arquivo `tests/restaurant.spec.js`.
-  const createMenu = (obj) => ({ fetchMenu: (() => obj) });
-  console.log(createMenu());
+// const createMenu = (obj) => ({ fetchMenu: (() => obj) });
+
 //------------------------------------------------------------------------------------------
 
 // PASSO 2: Adicione ao objeto retornado por `createMenu()` uma chave de nome `consumption` que, como valor inicial, tem um array vazio.
-//
+  const createMenu = (obj) => ({ 
+    fetchMenu: (() => obj),
+    consumption: [], 
+  });
+
 // Agora faça o TESTE 5 no arquivo `tests/restaurant.spec.js`.
 
 //------------------------------------------------------------------------------------------

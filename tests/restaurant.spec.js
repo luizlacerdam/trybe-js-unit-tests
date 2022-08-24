@@ -61,7 +61,7 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     expect(typeof createMenu()).toBe('object');
     expect(typeof createMenu().fetchMenu).toBe('function');
   });
-});
+
     
     
     // TESTE 2: Verifique se 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`, 
@@ -84,7 +84,10 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.consumption // Retorno: []
     // ```
-
+  it('Verifique se "objetoRetornado.consumption", após a criação do menu, retorna um array vazio.', () => {
+    expect(Array.isArray(createMenu().consumption)).toBe(true);
+    expect(createMenu().consumption.length).toBe(0);
+  });
     // Agora faça o PASSO 2 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
 
@@ -132,7 +135,7 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     // ```
   
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
-  
+  });
 
 
     
