@@ -3,9 +3,6 @@
 
   Esse projeto foi feito para praticar conceitos do TDD: Test Driven Development.
 
-## Veja o resultado a seguir do projeto pronto:
-  ![exemplo de uma todo list](./todo-list-example.gif)
-
 ## Habilidades
   - Escrever testes unitários utilizando o módulo Jest do NodeJS para verificar o correto funcionamento das funções;
 
